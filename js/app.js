@@ -70,13 +70,14 @@ const obj = {
           this.predictions = predictsArr1; 
         },
         showPrediction() {
-          const randomPhrase = Math.floor(Math.random() * this.predictions.length);
+          const randomPhrase = obj.takeNumber();
           const predictions = this.predictions[randomPhrase];
           console.log(`Случайная фраза: ${predictions}`);
+          console.log(this.takeNumber())
         },
         takeNumber() {
-          const num = Math.floor(Math.random() * this.predictions.length)+1;
-          console.log(`Случайный номер: ${num}`)
+          const num = Math.floor(Math.random() * this.predictions.length);
+          return num
         },
 }
 const predictions = obj;
